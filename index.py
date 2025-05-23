@@ -24,7 +24,7 @@ student_marks = {entry["name"]: entry["marks"] for entry in student_data}
 
 @app.get("/")
 def home():
-    return {"message": "Use /api?name=X&name=Y to get marks."}
+    return {}
 
 @app.get("/api")
 def get_marks(name: Optional[list[str]] = Query(None)):
