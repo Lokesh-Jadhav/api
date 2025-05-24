@@ -1,19 +1,8 @@
 {
-  "version": 2,
   "builds": [
-    {
-      "src": "index.py",
-      "use": "@vercel/python"
-    }
+    { "src": "index.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/api(?:/)?(.*)",
-      "dest": "index.py"
-    }
-  ],
-  "files": [
-    "index.py",
-    "q-vercel-python.json"
+    { "src": "/(.*)", "dest": "index.py" }
   ]
 }
